@@ -65,8 +65,9 @@ REDDIT_HEADERS = {
     "User-Agent": "LFGlobalCapital-SubstackBot/1.0 (by LucasFO)"
 }
 
-DATA_DIR   = "/Users/lucasfdezortiz/substack-assistant/data"
-CACHE_FILE = "/Users/lucasfdezortiz/substack-assistant/data/latest_ideas.json"
+import os
+DATA_DIR   = os.path.join(os.path.dirname(__file__), "data")
+CACHE_FILE = os.path.join(os.path.dirname(__file__), "data", "latest_ideas.json")
 
 CACHE_TTL_HOURS = 6
 TOP_ITEMS = 18          # slightly more to accommodate research items
